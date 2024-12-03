@@ -59,7 +59,7 @@ const displayWord=targetWord.split("").map((letter)=>(guesses.includes(letter)? 
     key={letter}
     onClick={()=> handleGuess(letter)}
     disabled={guesses.includes(letter)}
-     className="bg-slate-800 text-white font-bold h-[20px] w-[30px] items-center justify-center text-center mb-2 mx-1 hover:bg-slate-300 hover:text-slate-900">{letter}</button>
+     className="bg-slate-800 text-white font-bold h-[20px] w-[30px] items-center justify-center text-center mb-2 mx-1 hover:bg-slate-300 disabled:bg-gray-400 disabled:cursor-not-allowed">{letter}</button>
   ))}
 </div>
   <button className="bg-slate-700 text-white font-bold p-1 rounded-lg hover:bg-yellow-500 hover:text-slate-900 m-2" onClick={gameStart}>RESTART</button>
